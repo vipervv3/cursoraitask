@@ -26,6 +26,7 @@ export default function Sidebar() {
   const pathname = usePathname()
 
   useEffect(() => {
+    // Check for demo user in localStorage as fallback
     const demoUser = localStorage.getItem('demo-user')
     if (demoUser) {
       setUser(JSON.parse(demoUser))
@@ -59,7 +60,7 @@ export default function Sidebar() {
         {/* Logo */}
         <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">AI</span>
             </div>
             {!collapsed && (
@@ -89,7 +90,7 @@ export default function Sidebar() {
               href={item.href}
               className={`group flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 item.current
-                  ? 'bg-primary text-white'
+                  ? 'bg-blue-600 text-white'
                   : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
               }`}
             >
@@ -101,7 +102,7 @@ export default function Sidebar() {
                 <span className={`ml-2 px-2 py-1 text-xs rounded-full ${
                   item.current 
                     ? 'bg-white/20 text-white' 
-                    : 'bg-primary text-white'
+                    : 'bg-blue-600 text-white'
                 }`}>
                   {item.badge}
                 </span>
