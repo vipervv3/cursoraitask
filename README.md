@@ -182,16 +182,40 @@ Beautiful HTML emails with:
 ## 🚀 Deployment
 
 ### Vercel Deployment
-1. Connect your GitHub repository to Vercel
-2. Set environment variables in Vercel dashboard
-3. Deploy automatically on push to main branch
 
-### Environment Variables
-Ensure all required environment variables are set in your deployment platform:
-- Supabase credentials
-- AI service API keys
-- Email service configuration
-- Application URLs
+1. **Fork this repository** to your GitHub account
+
+2. **Connect to Vercel**:
+   - Go to [Vercel Dashboard](https://vercel.com/dashboard)
+   - Click "New Project"
+   - Import your forked repository
+   - Set up environment variables in Vercel dashboard
+
+3. **Environment Variables** (Set in Vercel):
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+   OPENAI_API_KEY=your_openai_api_key
+   GROQ_API_KEY=your_groq_api_key
+   ASSEMBLYAI_API_KEY=your_assemblyai_api_key
+   RESEND_API_KEY=your_resend_api_key
+   NEXT_PUBLIC_APP_URL=https://your-app.vercel.app
+   ```
+
+4. **Deploy**: Vercel will automatically deploy on every push to main
+
+### Live Demo
+
+- **GitHub Repository**: [https://github.com/vipervv3/cursoraitask](https://github.com/vipervv3/cursoraitask)
+- **Live Application**: [https://cursoraitask.vercel.app/](https://cursoraitask.vercel.app/)
+
+### Demo Mode
+
+The application includes a demo mode that works without external dependencies:
+
+- **Email**: demo@aiprojecthub.com
+- **Password**: demo123
 
 ## 📊 Monitoring & Analytics
 
